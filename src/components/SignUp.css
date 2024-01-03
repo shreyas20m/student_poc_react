@@ -1,0 +1,83 @@
+/* Filename: App.css */
+
+/* .App {
+	text-align: center;
+	background-color: rgb(39, 31, 112);
+} */
+
+.label {
+	display: inline-block;
+	font-size: larger;
+	color: rgba(10, 10, 10, 0.856);
+	padding: 5px;
+	width: 15%;
+    text-align: left;
+}
+
+.input {
+	font-size: larger;
+	padding: 5px;
+	margin: 2px;
+
+}
+
+.btn {
+	color: white;
+	background-color: rgb(37, 124, 158);
+	border-radius: 5px;
+	font-size: larger;
+	display: block;
+	padding: 5px;
+	margin: 10px auto;
+}
+
+.messages {
+	display: flex;
+	justify-content: center;
+}
+
+.error {
+	display: block;
+	background-color: red;
+	color: white;
+	width: fit-content;
+	height: 50px;
+	padding: 5px;
+}
+
+.success {
+	display: block;
+	background-color: lightblue;
+	color: black;
+	width: fit-content;
+	height: 50px;
+	padding: 5px;
+}
+
+.success-message{
+	color: green;
+}
+
+.form{
+	padding: 80px;
+}
+
+.radio-container {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px; /* Adjust the gap as needed */
+	width: 23%;
+  }
+  
+  .radio-label {
+	display: flex;
+	align-items: center;
+  }
+
+.input_feild{
+	display: block;
+	margin: 5px 0;
+	/* width: 30%; */
+
+}

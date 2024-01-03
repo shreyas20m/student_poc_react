@@ -1,0 +1,26 @@
+.course{
+    display:flex;
+    flex-direction: row;
+    row-gap: 10px;
+}
+
+td{
+    text-align: left;
+    border: 0;
+}
+
+table{
+    margin: auto;
+}
+thead tr{
+    background-color: dimgrey;
+    padding: 5px 0;
+}
+
+th{
+    padding: 5px 0;
+}
+
+tbody{
+    background-color: lightgrey;
+}
