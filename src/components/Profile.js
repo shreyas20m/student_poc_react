@@ -114,8 +114,9 @@ function Profile() {
                     pauseOnHover: true,
                     draggable: true,
                 });
+                navigate('/');
+
             }
-            navigate('/');
         })
     }
     return (
@@ -189,7 +190,7 @@ function Profile() {
                 </div>
             </form>
             <button onClick={handleUpdateProfile} className="btn" type="submit">Update</button>
-
+            <ToastContainer />
         </div>
       );
 }

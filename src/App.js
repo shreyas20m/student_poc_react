@@ -8,22 +8,26 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import MyCourse from './components/MyCourse';
+import { Link, useNavigate } from 'react-router-dom';
 
 function App() {
   const [isTokenValid, setisTokenValid] = useState(false)
+  const navigate = useNavigate();
   function clear_token() {
     setisTokenValid(false)
     localStorage.removeItem('token')
+    navigate('/');
   }
 
   useEffect(() => {
+    console.log(isTokenValid)
     if (localStorage.getItem('token'))
       {setisTokenValid(true)}
   }, [])
 
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar isTokenValid={isTokenValid} clear_token={clear_token}/>
       <div className='container' >
         <Routes>
           <Route path='/' element={<Home/>}></Route>

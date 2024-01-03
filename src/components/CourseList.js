@@ -11,6 +11,7 @@ function CourseList() {
 
 
     const fetchCourses = () => { 
+        console.log("set value", searchQuery)
         return fetch('http://localhost:3001/search?q='+searchQuery+'&sort_by_key='+sortConfig.key+'&sort_by='+sortConfig.direction) 
                 .then((res) => {
                     // console.log (" COURSES ", res)
@@ -26,14 +27,19 @@ function CourseList() {
         
         useEffect(() => {
             fetchCourses();
-        }, [])
+        }, [searchQuery])
     
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
-        fetchCourses()
-        // Call search API with the updated search query
-        // Modify the API endpoint as needed
-        // Example: fetch(`http://localhost:3001/search?query=${e.target.value}`)
+        console.log('onchagen value',e.target.value)
+        // console.log('set variable',searchQuery)
+
+        // fetchCourses()
+        // setSearchQuery(e.target.value, () => {
+        //     console.log('onchange value', e.target.value);
+        //     console.log('set variable', searchQuery);
+        //     fetchCourses();
+        // });
         };
     const handleSort =(key) =>{
         let direction = 'asc';
@@ -123,7 +129,7 @@ function CourseList() {
                     </tbody>)
                 })}
             </table>
-            {/* <ToastContainer /> */}
+            <ToastContainer />
         </div>
    
     )
